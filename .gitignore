@@ -2,6 +2,8 @@
 # Mantém a pasta no repositório (via .gitkeep), mas ignora o conteúdo baixado/gerado.
 dados/raw/*
 !dados/raw/.gitkeep
+dados/auditoria/*
+!dados/auditoria/.gitkeep
 dados/processed/*
 !dados/processed/.gitkeep
 

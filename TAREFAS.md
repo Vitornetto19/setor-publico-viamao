@@ -53,19 +53,20 @@ Legenda: `- [ ]` pendente · `- [x]` concluído. Cada fase tem um **Critério de
 
 ---
 
-## Fase 3 — ETL · Processamento (`etl/02_processa.py`)  — Princípios P1, P2, P3, P5
+## Fase 3 — ETL · Processamento (`etl/02_processa.py`)  — Princípios P1, P2, P3, P5 ✅ (concluída)
 
-- [ ] Extrair e ler os CSVs de cada ZIP (atenção ao encoding/separador do TCE-RS)
-- [ ] Normalizar colunas-chave: `nm_OrgaoOrcamentario`, `nm_Funcao`/`cd_Funcao`,
-      `nm_Credor`/`cpf_cnpj_Credor`, `vl_Empenho`, `vl_Liquidacao`, `vl_Pagamento`, tipo de operação
-- [ ] Converter valores monetários (separador decimal/milhar) para numérico
-- [ ] Documentar descartes (duplicatas, operações fora de escopo) com comentário e contagem
-- [ ] Gerar **`dados/auditoria/viamao_despesa_{ANO}_auditoria.xlsx`** por ano:
+- [x] Extrair e ler os CSVs de cada ZIP (encoding `utf-8-sig` + BOM, separador `,`, decimal `.` — confirmados por inspeção)
+- [x] Normalizar colunas-chave (nomes reais do TCE-RS): `nome_orgao_orcamentario`, `ds_funcao`/`cd_funcao`,
+      `nm_credor`/`cnpj_cpf`, `vl_empenho`, `vl_liquidacao`, `vl_pagamento`, `tipo_operacao` (E/L/P)
+- [x] Converter valores monetários para numérico (`errors="raise"`; 0 erros de parse nos 6 anos)
+- [x] Documentar descartes: nenhum registro removido; negativos = estornos (mantidos, somas líquidas);
+      duplicatas exatas contadas na aba Metadados; ressalva temporal (`ano_operacao`) documentada
+- [x] Gerar **`dados/auditoria/viamao_despesa_{ANO}_auditoria.xlsx`** por ano:
       - Aba **Dados** (todos os registros, colunas padronizadas)
       - Aba **Metadados** (fonte, URL, ZIP original, data/hora, nº de registros, MD5)
-- [ ] Gerar **`dados/processed/viamao_despesa_consolidado.parquet`** (todos os anos)
-- [ ] Escrever **`etl/README_ETL.md`** documentando Extração → Transformação → Carregamento
-- [ ] Print de resumo: linhas por ano, totais de liquidação/pagamento
+- [x] Gerar **`dados/processed/viamao_despesa_consolidado.parquet`** (408.953 linhas × 31 colunas)
+- [x] Escrever **`etl/README_ETL.md`** documentando Extração → Transformação → Carregamento
+- [x] Print de resumo: linhas por ano, totais de liquidação/pagamento (validados contra o parquet)
 
 **Critério de pronto:** Excel de auditoria por ano + parquet consolidado + README_ETL escrito.
 **Regra P1:** nada de `fillna(0)` sem comentário justificando; ausência = `NaN`/`null`.
