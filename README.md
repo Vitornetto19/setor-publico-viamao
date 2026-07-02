@@ -22,7 +22,8 @@ pelo Tribunal.
 ## Estrutura
 
 ```
-docs/         requisitos do trabalho + materiais-fonte (modelo Charqueadas/2022)
+docs/         requisitos do trabalho (01/02/03_*.md)
+docs/materiais_professora/  materiais-fonte da professora (modelo Charqueadas, orientações, tabelas)
 dados/raw/        ZIPs originais do TCE-RS (não versionados)
 dados/auditoria/  Excel auditável por ano (evidência primária)
 dados/processed/  Parquet consolidado (não versionado)
@@ -40,7 +41,7 @@ exploração → análises). O passo a passo completo, com critérios de pronto,
 ## Princípios inegociáveis
 
 Nenhum dado é inventado ou estimado sem fonte; todo o ETL é documentado e reproduzível.
-Detalhes em [`02_PRINCIPIOS.md`](02_PRINCIPIOS.md).
+Detalhes em [`docs/02_PRINCIPIOS.md`](docs/02_PRINCIPIOS.md).
 
 ---
 

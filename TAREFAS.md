@@ -10,31 +10,31 @@ sequência obrigatória é:
 
 Legenda: `- [ ]` pendente · `- [x]` concluído. Cada fase tem um **Critério de pronto**.
 
-> Referências: [`01_CONTEXTO_PROJETO.md`](01_CONTEXTO_PROJETO.md),
-> [`02_PRINCIPIOS.md`](02_PRINCIPIOS.md), [`03_REQUISITOS_TRABALHO.md`](03_REQUISITOS_TRABALHO.md).
+> Referências: [`docs/01_CONTEXTO_PROJETO.md`](docs/01_CONTEXTO_PROJETO.md),
+> [`docs/02_PRINCIPIOS.md`](docs/02_PRINCIPIOS.md), [`docs/03_REQUISITOS_TRABALHO.md`](docs/03_REQUISITOS_TRABALHO.md).
 
 ---
 
-## Fase 0 — Setup do projeto ✅ (em andamento nesta etapa)
+## Fase 0 — Setup do projeto ✅ (concluída)
 
 - [x] Verificar ambiente (git, gh, autenticação GitHub)
 - [x] Criar `.gitignore`, `.gitattributes`, `README.md`
 - [x] Criar scaffold de pastas (`dados/`, `etl/`, `notebooks/`, `output/`)
 - [x] Escrever este `TAREFAS.md`
-- [ ] `git init` + commit inicial + publicar `setor-publico-viamao` no GitHub
-- [ ] Criar `requirements.txt` (pandas, requests, openpyxl, pyarrow, matplotlib, jupyter)
-- [ ] Criar ambiente virtual e instalar dependências
+- [x] `git init` + commit inicial + publicar `setor-publico-viamao` no GitHub
+- [x] Criar `requirements.txt` (pandas, requests, openpyxl, pyarrow, matplotlib, jupyter)
+- [x] Criar ambiente virtual (`.venv`) e instalar dependências; kernel Jupyter registrado
 
 **Critério de pronto:** repositório publicado no GitHub; ambiente Python rodando `import pandas`.
 
 ---
 
-## Fase 1 — Organização das pastas e materiais
+## Fase 1 — Organização das pastas e materiais ✅ (concluída)
 
-- [ ] Confirmar estrutura de pastas conforme seção 5 do `01_CONTEXTO`
-- [ ] Organizar `docs/`: manter os requisitos (`01/02/03_*.md`) e os materiais-fonte da
-      professora (modelo Charqueadas, orientações, tabelas) claramente separados
-- [ ] Conferir que `dados/raw/` e `dados/processed/` estão ignorados pelo git (só `.gitkeep`)
+- [x] Confirmar estrutura de pastas conforme seção 5 do `docs/01_CONTEXTO_PROJETO.md`
+- [x] Organizar `docs/`: requisitos (`01/02/03_*.md`) na raiz de `docs/` e materiais-fonte da
+      professora (modelo Charqueadas, orientações, tabelas) em `docs/materiais_professora/`
+- [x] Conferir que `dados/raw/` e `dados/processed/` estão ignorados pelo git (só `.gitkeep`)
 
 **Critério de pronto:** `git status` limpo; estrutura idêntica à documentada.
 
@@ -139,11 +139,11 @@ Variável: `vl_Pagamento` · filtro tipo = **Pagamento** · agrupar por `nm_Cred
 
 ## Fase 8 — Fechamento e entrega
 
-- [ ] Rodar o **checklist final** do `03_REQUISITOS_TRABALHO.md`
+- [ ] Rodar o **checklist final** do `docs/03_REQUISITOS_TRABALHO.md`
 - [ ] Conferir que toda tabela/gráfico cita fonte ("TCE-RS/SIAPC. Elaboração própria.")
 - [ ] Conferir distinção clara entre valores nominais e reais; deflator documentado
 - [ ] Verificar que todos os notebooks rodam do início ao fim sem erro
 - [ ] Commit e push de cada entregável em `output/`
 - [ ] Redigir os textos analíticos finais (fora do código) com base nos outputs
 
-**Critério de pronto:** todos os itens do checklist do `03_REQUISITOS` marcados.
+**Critério de pronto:** todos os itens do checklist do `docs/03_REQUISITOS_TRABALHO.md` marcados.

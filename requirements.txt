@@ -1,0 +1,25 @@
+# Dependências do projeto — Diagnóstico Orçamentário de Viamão/RS
+# Instalar em um ambiente virtual:
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows PowerShell)
+#   pip install -r requirements.txt
+#
+# Versões com limite inferior (>=) para reprodutibilidade sem travar atualizações menores.
+
+# --- Manipulação de dados ---
+pandas>=2.2          # leitura de CSV, agregações por órgão/função/credor
+numpy>=1.26          # suporte numérico (dependência do pandas; explícito por clareza)
+
+# --- Coleta (ETL 01_coleta.py) ---
+requests>=2.31       # consultar a API CKAN do TCE-RS e baixar os ZIPs
+
+# --- Entrada/saída (ETL 02_processa.py) ---
+openpyxl>=3.1        # gerar/ler os Excel de auditoria (dados/auditoria/*.xlsx)
+pyarrow>=15.0        # ler/escrever o parquet consolidado (dados/processed/)
+
+# --- Visualização (notebooks de análise) ---
+matplotlib>=3.8      # gráficos das seções 3.1, 3.2 e 3.3 (export PNG 300 DPI)
+
+# --- Ambiente de análise ---
+jupyterlab>=4.0      # interface para os notebooks
+ipykernel>=6.29      # kernel Python para o Jupyter

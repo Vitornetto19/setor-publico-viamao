@@ -90,10 +90,17 @@ O trabalho segue o modelo de análise financeira pública aplicada. Com base no 
 ```
 viamao-despesa/
 │
-├── docs/                          ← documentos de requisitos (este arquivo e os demais)
+├── docs/                          ← requisitos do trabalho + materiais-fonte da professora
 │   ├── 01_CONTEXTO_PROJETO.md
 │   ├── 02_PRINCIPIOS.md
-│   └── 03_REQUISITOS_TRABALHO.md
+│   ├── 03_REQUISITOS_TRABALHO.md
+│   └── materiais_professora/      ← fontes originais da professora (não editar)
+│       ├── Orientações setor público.md          (enunciado completo do trabalho)
+│       ├── TRABALHO_CHARQUEADAS_2022_ MODELO.pdf
+│       ├── APRES_TRAB_CHARQUEADAS_2022_ MODELO.pdf
+│       ├── ORIENTAÇÕES_TRABALHO EM DUPLA_26_1.doc
+│       ├── ORIENTACOES_TRAB_DUPLA_TABELAS (1) (1).xlsx
+│       └── CLASSIFICAÇÃO DA RECEITA ORÇAMENTARIA.docx
 │
 ├── dados/
 │   ├── raw/                       ← ZIPs originais baixados do TCE-RS (não modificar)
