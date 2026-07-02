@@ -1,0 +1,19 @@
+# === Dados brutos e intermediários (regeneráveis via ETL; podem ser grandes) ===
+# Mantém a pasta no repositório (via .gitkeep), mas ignora o conteúdo baixado/gerado.
+dados/raw/*
+!dados/raw/.gitkeep
+dados/processed/*
+!dados/processed/.gitkeep
+
+# === Python ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# === Sistema / Office ===
+.DS_Store
+Thumbs.db
+~$*

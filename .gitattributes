@@ -1,0 +1,12 @@
+# Normaliza fim de linha (evita ruído de CRLF/LF no Windows) e marca binários.
+* text=auto
+
+*.png  binary
+*.jpg  binary
+*.xlsx binary
+*.xls  binary
+*.pdf  binary
+*.zip  binary
+*.parquet binary
+*.doc  binary
+*.docx binary
