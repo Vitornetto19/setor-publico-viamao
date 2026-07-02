@@ -73,16 +73,17 @@ Legenda: `- [ ]` pendente · `- [x]` concluído. Cada fase tem um **Critério de
 
 ---
 
-## Fase 4 — Notebook exploratório (`notebooks/00_exploratorio.ipynb`)  — Princípio P6
+## Fase 4 — Notebook exploratório (`notebooks/00_exploratorio.ipynb`)  — Princípio P6 ✅ (concluída)
 
-- [ ] Contagem de linhas por ano
-- [ ] Tipos de operação (Empenho, Liquidação, Pagamento) e quantidades
-- [ ] Lista de **funções** e **órgãos** únicos
-- [ ] Top 10 credores brutos (antes de qualquer filtro)
-- [ ] Verificação de nulos nas colunas críticas
-- [ ] Totais de liquidação e pagamento por ano (conferir contra os Excels de auditoria)
+- [x] Contagem de linhas por ano (2019–2024 completos; 408.953 operações)
+- [x] Tipos de operação (Empenho, Liquidação, Pagamento) e quantidades (só E/L/P — verificado)
+- [x] Lista de **funções** (36) e **órgãos** (25) únicos, com estabilidade entre anos
+- [x] Top 10 credores brutos por `vl_pagamento` (antes de qualquer filtro; internos sinalizados p/ 3.3)
+- [x] Verificação de nulos nas colunas críticas (valores nulos são estruturais; `cnpj_cpf` ~30% ausente)
+- [x] Totais de liquidação e pagamento por ano **conferidos contra os Excels de auditoria** (dif. < R$ 0,01)
 
 **Critério de pronto:** notebook roda do início ao fim; sanity checks batem com a auditoria.
+Executado com `nbconvert --execute` (0 erros); conferência automática contra `dados/auditoria/*.xlsx`.
 
 ---
 
