@@ -40,12 +40,13 @@ Legenda: `- [ ]` pendente · `- [x]` concluído. Cada fase tem um **Critério de
 
 ---
 
-## Fase 2 — ETL · Coleta (`etl/01_coleta.py`)  — Princípios P2, P3
+## Fase 2 — ETL · Coleta (`etl/01_coleta.py`)  — Princípios P2, P3 ✅ (concluída)
 
-- [ ] Consultar a API CKAN do TCE-RS: `package_show?id=despesa-orcamentaria-por-empenhos-pm-de-viamao-{ANO}`
-- [ ] Baixar os ZIPs de **2019 a 2024** → `dados/raw/viamao_despesa_{ANO}.zip` (não modificar)
-- [ ] Registrar, para cada arquivo: URL, nome, **hash MD5**, data/hora da extração
-- [ ] Print de resumo: anos baixados, tamanho e hash de cada ZIP
+- [x] Consultar a API CKAN do TCE-RS: `package_show?id=despesa-orcamentaria-por-empenhos-pm-de-viamao-{ANO}`
+- [x] Baixar os ZIPs de **2019 a 2024** → `dados/raw/viamao_despesa_{ANO}.zip` (não modificar)
+- [x] Registrar, para cada arquivo: URL, nome, **hash MD5**, data/hora da extração
+      (em `dados/raw/manifest_coleta.csv`)
+- [x] Print de resumo: anos baixados, tamanho e hash de cada ZIP
 
 **Critério de pronto:** 6 ZIPs em `dados/raw/`; nenhum ano faltando sem justificativa.
 **Regra P1:** ano indisponível fica registrado como ausente — nunca inventar.
