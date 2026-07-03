@@ -134,19 +134,28 @@ liquidação em 2024** (ausência real, não zero). Executado com `nbconvert` (0
 
 ---
 
-## Fase 7 — Seção 3.3 · Credores (`notebooks/33_credores.ipynb`)
+## Fase 7 — Seção 3.3 · Credores (`notebooks/33_credores.ipynb`) ✅ (concluída)
 
-Variável: `vl_Pagamento` · filtro tipo = **Pagamento** · agrupar por `nm_Credor` + `cpf_cnpj_Credor`.
+Variável: `vl_pagamento` · filtro tipo = **Pagamento** · agrupar por `cd_credor` (chave estável; nome/CNPJ do registro).
 
-- [ ] Tratar credores internos (Prefeitura/órgão próprio) vs. fornecedores externos
-- [ ] Tabela 3.3.A — Top 20 credores de 2024 (nome, CNPJ, valor pago, % do total, % acumulado)
-- [ ] Tabela 3.3.B — credores recorrentes (aparecem em 2022, 2023 e 2024)
-- [ ] Gráfico 3.3 — concentração dos Top 10 (barras horizontais ou pizza)
-- [ ] Exportar `output/tabelas/3_3_maiores_credores_2024.xlsx` e `output/graficos/3_3_concentracao_credores.png`
-- [ ] Texto de análise: 3.3.a (quem/qual setor), 3.3.b (concentração — os 5 maiores = X%),
+- [x] Tratar credores internos (Prefeitura/órgão próprio) vs. fornecedores externos
+- [x] Tabela 3.3.A — Top 20 credores de 2024 (nome, CNPJ, valor pago, % do total, % acumulado)
+- [x] Tabela 3.3.B — credores recorrentes (aparecem em 2022, 2023 e 2024)
+- [x] Gráfico 3.3 — concentração dos Top 10 (barras horizontais + "Demais"; paleta colorblind-safe, 300 DPI)
+- [x] Exportar `output/tabelas/3_3_maiores_credores_2024.xlsx` (5 abas) e `output/graficos/3_3_concentracao_credores.png`
+- [x] Texto de análise: 3.3.a (quem/qual setor), 3.3.b (concentração — os 5 maiores = X%),
       3.3.c (recorrência à luz da ciência econômica: concorrência, rent-seeking, barreiras à entrada)
 
 **Critério de pronto:** tabelas A/B + gráfico exportados; perguntas 3.3.a/b/c respondidas.
+Notas: agrupamento por `cd_credor` (0 nulos; nome harmonizado pelo ano mais recente). **Tratamento de internos (P1):**
+12 `cd_credor` classificados explicitamente como **intragovernamentais** (folha, previdências IPREV/INSS/IPE-RS,
+EPTV, tributos Receita/SEFAZ, depósitos judiciais, serviço da dívida no BRDE) — mantidos na 3.3.A, excluídos das
+métricas de fornecedores. Achados: **folha = 40,0%** do pago; **intragov. = 53,4%**, **fornecedores de mercado = 46,6%**
+(R$ 342,6 mi, 2.355 credores). Concentração entre fornecedores: 5 maiores **36,2%**, 20 maiores **62,4%**. Maior
+fornecedor = **Instituto Socio-Educacional da Biodiversidade** (saúde terceirizada, R$ 36,9 mi). Recorrência: **404
+fornecedores** pagos nos 3 anos (8,8%) concentram **~67%** do pago a fornecedores em 2024. Ressalvas: `vl_pagamento` ≠
+liquidação (restos a pagar); os dados mostram **padrão** (concentração+recorrência), **não conduta** — rent-seeking
+exigiria olhar os processos licitatórios. Executado com `nbconvert --execute` (0 erros).
 
 ---
 
