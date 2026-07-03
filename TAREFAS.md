@@ -87,18 +87,21 @@ Executado com `nbconvert --execute` (0 erros); conferência automática contra `
 
 ---
 
-## Fase 5 — Seção 3.1 · Institucional (`notebooks/31_institucional.ipynb`)
+## Fase 5 — Seção 3.1 · Institucional (`notebooks/31_institucional.ipynb`) ✅ (concluída)
 
-Variável: `vl_Liquidacao` · filtro tipo = **Liquidação** · agrupar por `nm_OrgaoOrcamentario`.
+Variável: `vl_liquidacao` · filtro tipo = **Liquidação** · agrupar por **órgão** (harmonizado por `cd_orgao_orcamentario`).
 
-- [ ] Tabela 3.1.A — despesa liquidada por órgão × ano (R$ nominais), ordenada por 2024
-- [ ] Tabela 3.1.B — participação relativa (%) por órgão × ano
-- [ ] Variação nominal e **real** (deflator IPCA base 2024) 2019→2024 por órgão
-- [ ] Gráfico 3.1 — barras empilhadas da participação por órgão (título, fonte, eixos)
-- [ ] Exportar `output/tabelas/3_1_despesa_por_orgao.xlsx` e `output/graficos/3_1_evolucao_por_orgao.png`
-- [ ] Texto de análise: 3.1.a (quem domina e por quê) e 3.1.b (houve inversão? contexto)
+- [x] Tabela 3.1.A — despesa liquidada por órgão × ano (R$ nominais), ordenada por 2024 + Var.% nominal
+- [x] Tabela 3.1.B — participação relativa (%) por órgão × ano (colunas somam 100%)
+- [x] Tabela 3.1.C — variação nominal e **real** (deflator IPCA base dez/2024) 2019→2024 por órgão
+- [x] Gráfico 3.1 — barras empilhadas 100% da participação (8 maiores + Demais; paleta colorblind-safe, 300 DPI)
+- [x] Exportar `output/tabelas/3_1_despesa_por_orgao.xlsx` (5 abas) e `output/graficos/3_1_evolucao_por_orgao.png`
+- [x] Texto de análise: 3.1.a (Educação+Saúde ≈63%) e 3.1.b (Obras 16%→9%; Fazenda ultrapassa Administração)
 
 **Critério de pronto:** 2+ tabelas e 1 gráfico exportados; perguntas 3.1.a/b respondidas.
+Notas: órgãos harmonizados por código (17 códigos vs 25 grafias); IPCA registrado em `dados/externos/`
+(IBGE/SIDRA, fonte); inflação acum. 2019→2024 = 33,5%; total município +51,1% nominal / +13,2% real.
+Executado com `nbconvert --execute` (0 erros); totais conferidos contra a auditoria.
 
 ---
 
