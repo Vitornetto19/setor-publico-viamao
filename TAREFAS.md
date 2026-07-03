@@ -159,13 +159,18 @@ exigiria olhar os processos licitatórios. Executado com `nbconvert --execute` (
 
 ---
 
-## Fase 8 — Fechamento e entrega
+## Fase 8 — Fechamento e entrega ✅ (concluída)
 
-- [ ] Rodar o **checklist final** do `docs/03_REQUISITOS_TRABALHO.md`
-- [ ] Conferir que toda tabela/gráfico cita fonte ("TCE-RS/SIAPC. Elaboração própria.")
-- [ ] Conferir distinção clara entre valores nominais e reais; deflator documentado
-- [ ] Verificar que todos os notebooks rodam do início ao fim sem erro
-- [ ] Commit e push de cada entregável em `output/`
-- [ ] Redigir os textos analíticos finais (fora do código) com base nos outputs
+- [x] Rodar o **checklist final** do `docs/03_REQUISITOS_TRABALHO.md` (9/9 itens marcados)
+- [x] Conferir que toda tabela/gráfico cita fonte ("TCE-RS/SIAPC. Elaboração própria.")
+- [x] Conferir distinção clara entre valores nominais e reais; deflator documentado
+- [x] Verificar que todos os notebooks rodam do início ao fim sem erro
+- [x] Commit e push de cada entregável em `output/`
+- [x] Redigir os textos analíticos finais (fora do código) com base nos outputs
 
 **Critério de pronto:** todos os itens do checklist do `docs/03_REQUISITOS_TRABALHO.md` marcados.
+Notas: os 4 notebooks (00/31/32/33) reexecutados de ponta a ponta com `nbconvert --execute` (0 erros);
+entregáveis conferidos — 3 planilhas em `output/tabelas/` e 5 gráficos em `output/graficos/`, cada um com
+fonte (aba Metadados nas planilhas; rodapé nos gráficos). Textos analíticos finais das seções 3.1/3.2/3.3
+(respondendo 3.1.a/b, 3.2.a/b/c, 3.3.a/b/c) redigidos em **`output/textos_analiticos.md`**. Projeto (parte
+do Vitor) concluído.

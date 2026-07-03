@@ -270,12 +270,12 @@ Deve responder:
 
 Antes de considerar a seção concluída, verificar:
 
-- [ ] Os dados vieram do TCE-RS (não foram digitados manualmente)
-- [ ] O Excel de auditoria por ano existe em `dados/auditoria/`
-- [ ] O notebook roda do início ao fim sem erro
-- [ ] Todas as tabelas estão exportadas em `output/tabelas/`
-- [ ] Todos os gráficos estão exportados em `output/graficos/`
-- [ ] Cada tabela e gráfico tem citação de fonte
-- [ ] Os valores nominais e reais estão claramente distinguidos
-- [ ] O deflator IPCA está documentado no notebook
-- [ ] As perguntas da professora estão todas respondidas nos textos
+- [x] Os dados vieram do TCE-RS (não foram digitados manualmente) — ETL via API CKAN (`etl/01_coleta.py`, `02_processa.py`)
+- [x] O Excel de auditoria por ano existe em `dados/auditoria/` — 6 arquivos (2019–2024)
+- [x] O notebook roda do início ao fim sem erro — 00/31/32/33 reexecutados com `nbconvert --execute` (0 erros)
+- [x] Todas as tabelas estão exportadas em `output/tabelas/` — 3.1, 3.2, 3.3 (`.xlsx`)
+- [x] Todos os gráficos estão exportados em `output/graficos/` — 5 PNGs (1+3+1)
+- [x] Cada tabela e gráfico tem citação de fonte — aba Metadados nas planilhas; rodapé nos gráficos
+- [x] Os valores nominais e reais estão claramente distinguidos — colunas/legendas separadas
+- [x] O deflator IPCA está documentado no notebook — fórmula + fonte IBGE/SIDRA 1737 var. 69
+- [x] As perguntas da professora estão todas respondidas nos textos — `output/textos_analiticos.md`
