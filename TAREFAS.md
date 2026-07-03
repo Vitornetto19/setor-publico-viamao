@@ -105,25 +105,32 @@ Executado com `nbconvert --execute` (0 erros); totais conferidos contra a audito
 
 ---
 
-## Fase 6 — Seção 3.2 · Funcional (`notebooks/32_funcional.ipynb`)
+## Fase 6 — Seção 3.2 · Funcional (`notebooks/32_funcional.ipynb`) ✅ (concluída)
 
-Variável: `vl_Liquidacao` · filtro **Liquidação** · agrupar por `nm_Funcao` (Portaria 42/1999).
+Variável: `vl_liquidacao` · filtro **Liquidação** · agrupar por **função** (harmonizada por `cd_funcao`, Portaria 42/1999).
 
-- [ ] Coletar dados externos **com fonte registrada** (P1): população IBGE por ano, IPCA
-      anual, IDH (Atlas Brasil), mortalidade infantil (Datasus), analfabetismo (IBGE), IDESE (DEE/RS)
-- [ ] Tabela 3.2.A — despesa por função × ano (nominal e real), variação % nominal e real
-- [ ] Tabela 3.2.B — gasto per capita em Saúde e Educação por ano
-- [ ] Tabela 3.2.C — funções-meio vs. funções-fim (totais e participação %)
-- [ ] Tabela 3.2.D — indicadores sociais de Viamão (dados externos)
-- [ ] Gráfico 3.2.A — evolução das principais funções
-- [ ] Gráfico 3.2.B — per capita Saúde + Educação (barras duplas por ano)
-- [ ] Gráfico 3.2.C — meio vs. fim (barras empilhadas 100%)
-- [ ] Exportar `output/tabelas/3_2_despesa_por_funcao.xlsx` e os PNGs em `output/graficos/`
-- [ ] Texto de análise: 3.2.a (maior crescimento), 3.2.b (saúde/educação + cruzamento social),
+- [x] Coletar dados externos **com fonte registrada** (P1): população IBGE por ano, IPCA
+      anual, IDH (Atlas Brasil), mortalidade infantil (IBGE Cidades), analfabetismo (IBGE Censo 2022), IDESE (DEE/RS)
+- [x] Tabela 3.2.A — despesa por função × ano (nominal), variação % nominal e **real** (deflator IPCA)
+- [x] Tabela 3.2.B — gasto per capita em Saúde e Educação por ano (nominal e real)
+- [x] Tabela 3.2.C — funções-meio vs. funções-fim (totais e participação %)
+- [x] Tabela 3.2.D — indicadores sociais de Viamão (dados externos)
+- [x] Gráfico 3.2.A — evolução das principais funções (6 maiores, valores reais)
+- [x] Gráfico 3.2.B — per capita Saúde + Educação (barras duplas por ano, reais)
+- [x] Gráfico 3.2.C — meio vs. fim (barras empilhadas 100%)
+- [x] Exportar `output/tabelas/3_2_despesa_por_funcao.xlsx` (6 abas) e os 3 PNGs em `output/graficos/`
+- [x] Texto de análise: 3.2.a (maior crescimento), 3.2.b (saúde/educação + cruzamento social),
       3.2.c (meio vs. fim); contextualizar pandemia (2020/21) e enchentes RS (2024)
 
 **Critério de pronto:** tabelas A–D + 3 gráficos exportados; perguntas 3.2.a/b/c respondidas;
 deflator IPCA documentado.
+Notas: funções harmonizadas por código (18 códigos vs 36 grafias — só caixa/acento); **sem função
+Legislativa/Judiciária** (dataset é do Executivo). Achados: maior crescimento real entre funções
+materiais = **Transporte** (+75,2%); Saúde +20,0% e Educação +17,2% reais; per capita real Saúde
+R$542→715 e Educação R$1.025→1.321. **Funções-fim dominam e estáveis (84,7%→83,6%)**, sem inversão.
+**Ressalva censitária (P1):** o Censo 2022 revisou a população −12,9% (quebra de série); parte do
+salto no per capita em 2022+ é artefato do denominador — documentado. **Previdência Social some da
+liquidação em 2024** (ausência real, não zero). Executado com `nbconvert` (0 erros).
 
 ---
 

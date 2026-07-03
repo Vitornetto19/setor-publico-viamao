@@ -1,0 +1,5 @@
+indicador,ano_ref,viamao,rs,brasil,unidade,fonte
+IDHM,2010,0.717,0.746,0.727,indice_0a1,Atlas Brasil (PNUD/IPEA/FJP) - Censo 2010
+Taxa de analfabetismo 15 anos ou mais,2022,2.90,3.11,7.00,percentual,IBGE Censo 2022 (SIDRA tabela 9543)
+Mortalidade infantil,2010,13.44,,,por_mil_nascidos_vivos,IBGE Cidades (indicador municipal)
+IDESE bloco Educacao,2021,0.558,,,indice_0a1,DEE-RS / FEE (Carta de Conjuntura)

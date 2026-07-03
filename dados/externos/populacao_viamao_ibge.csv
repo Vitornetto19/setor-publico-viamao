@@ -1,0 +1,7 @@
+ano,populacao,tipo_fonte
+2019,255224,estimativa_ibge_base_censo2010
+2020,256302,estimativa_ibge_base_censo2010
+2021,257330,estimativa_ibge_base_censo2010
+2022,224112,censo_2022_contagem
+2023,228078,interpolacao_geometrica_censo2022_estimativa2024
+2024,232113,estimativa_ibge_base_censo2022
